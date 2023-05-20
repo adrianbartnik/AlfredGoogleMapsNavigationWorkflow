@@ -25,20 +25,27 @@ In addition, a default transportation mode can be set or set per search.
 
 ### Default Address Search based on your current location
 
+This opens the default Google Navigation with the address query as destination and your location as origin.
+The address query will be directly used as input for the Google Search. 
+
 ```shell
 mappy <your address query>
-```
 
-This opens the default Google Navigation with the address query as destination and your location as origin.
+Example: mappy New York, Times Square
+```
 
 ### Navigation to / from your home / work address
 
-```shell
-mappy [to|from] [home|work] <your address query>
-```
-
 This opens the default Google Navigation with the home/work address and the address query as origin/destination respectively.
 The home and work address need to be configured, see below.
+
+```shell
+mappy [to|from] [home|work] <your address query>
+
+Examples:
+- mappy to home Eiffel tower
+- mappy from work Brandenburger Gate
+```
 
 ### Transportation mode
 
@@ -46,8 +53,11 @@ You can configure a default transportation mode (car, walking, bike, public tran
 In addition, you can also configure the transportation per search by appending it to the commands above, e.g.:
 
 ```shell
-mappy <your address query> car
-mappy to home <your address query> walking
+mappy <your address query> <transportation mode>
+
+Examples:
+- mappy to home Big Ben, London walking
+- mappy from work Hardenbergpl. 8, 10787 Berlin bike
 ```
 
 A description of the different transportation modes can be found in the [Google Documentation](https://developers.google.com/maps/documentation/urls/get-started).
