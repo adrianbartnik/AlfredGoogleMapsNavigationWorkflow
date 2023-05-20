@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "Alfred Google Maps Navigation"
+version = "0.1.0"
+description = "Alfred workflow to quickly access the Google Maps Navigation"
+authors = ["Adrian Bartnik <alfred@adrianbartnik.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+pyproject-flake8 = "^6.0.0.post1"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "E501", "W503"]
+exclude = ".git,.venv"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
