@@ -1,4 +1,7 @@
-# Mappy - Google Maps Navigation for Alfred
+# Mappy - Google Maps Navigation Workflow for Alfred
+
+[![made with heart by Adrian Bartnik](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-adrian%20bartnik-DBA33A.svg?style=flat)](https://github.com/AdrianBartnik)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-986821.svg)](https://www.python.org/downloads/macos/)
 
 This Alfred Workflow makes it easy to quickly access the Google Maps Navigation.
 It either works with a simple address search or by combining `from` & `to` based on your pre-defined home or work address.
@@ -7,10 +10,12 @@ https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow/assets/39987
 
 ## Installation
 
-* Ensure you have Alfred installed with the Alfred Powerpack License :warning:
-* Download the [Google Maps ANavigation Workflow File](Google%20Maps%20Navigation.alfredworkflow) or see the **Releases** section in the sidebar. 
+* Ensure you have Alfred installed with the [Alfred Powerpack](https://www.alfredapp.com/powerpack/) :warning:
+* Download the [Google Maps Navigation Workflow File](https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow/releases/latest). 
 * Open the workflow file to import it into Alfred
 * Set up the workflow configuration parameters (see below for additional details) or by clicking the little [X] in the top right hand of the Workflow page in Alfred after installation
+
+![screenshot](assets/screenshot.png)
 
 ## Usage
 
