@@ -3,7 +3,7 @@
 This Alfred Workflow makes it easy to quickly access the Google Maps Navigation.
 It either works with a simple address search or by combining `from` & `to` based on your pre-defined home or work address.
 
-<video src='assets/demo.mp4' />
+https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow/assets/3998715/abfaa653-c147-43f7-b9e0-720867aa3288
 
 ## Usage
 
