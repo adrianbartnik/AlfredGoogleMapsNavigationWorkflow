@@ -73,3 +73,7 @@ Run the following to lint the code:
 poetry run pflake8 .
 poetry run black .
 ```
+
+## License
+
+* [Icon - Freepik from Flaticon](https://www.flaticon.com/de/kostenloses-icon/google-maps_2667975)
