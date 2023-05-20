@@ -5,6 +5,13 @@ It either works with a simple address search or by combining `from` & `to` based
 
 https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow/assets/3998715/abfaa653-c147-43f7-b9e0-720867aa3288
 
+## Installation
+
+* Ensure you have Alfred installed with the Alfred Powerpack License :warning:
+* Download the [Google Maps ANavigation Workflow File](Google%20Maps%20Navigation.alfredworkflow)
+* Open the workflow file to import it into Alfred
+* Set up the workflow configuration parameters (see below for additional details) or by clicking the little [X] in the top right hand of the Workflow page in Alfred after installation
+
 ## Usage
 
 You can use the `mappy` keyword to invoke this workflow from Alfred.

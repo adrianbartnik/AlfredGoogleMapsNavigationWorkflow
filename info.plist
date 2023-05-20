@@ -212,11 +212,55 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string># This is a dummy workflow to easily search for navigation.
+	<string># Mappy - Google Maps Navigation for Alfred
 
-Is is some example workflow. 
+This Alfred Workflow makes it easy to quickly access the Google Maps Navigation.
+It either works with a simple address search or by combining `from` &amp; `to` based on your pre-defined home or work address.
 
-![Markdown symbol](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)</string>
+See the full documentation on Github: https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow
+
+## Usage
+
+You can use the `mappy` keyword to invoke this workflow from Alfred.
+It provides two main features: quick access based on your current location or based on pre-configured home/work addresses.
+In addition, a default transportation mode can be set or set per search.
+
+### Default Address Search based on your current location
+
+&gt; `mappy &lt;your address query&gt;`
+
+This opens the default Google Navigation with the address query as destination and your location as origin.
+
+### Navigation to / from your home / work address
+
+&gt; `mappy [to|from] [home|work] &lt;your address query&gt;`
+
+This opens the default Google Navigation with the home/work address and the address query as origin/destination respectively.
+The home and work address need to be configured, see below.
+
+### Transportation mode
+
+You can configure a default transportation mode (car, walking, bike, public transport) for each search.
+In addition, you can also configure the transportation per search by appending it to the commands above, e.g.:
+
+* `mappy &lt;your address query&gt; car`
+* `mappy to home &lt;your address query&gt; walking`
+
+A description of the different transportation modes can be found in the [Google Documentation](https://developers.google.com/maps/documentation/urls/get-started).
+The latest list of valid transportation modes can be looked up in [lines 24 of the `google-maps.py` file](google-maps.py).
+
+| Transportation Mode | Description                            | Alternative Keys                  |
+| ------------------- | -------------------------------------- | --------------------------------- |
+| driving             | Car transportation                     | `["car", "drive", "driving"]`     |
+| bicycling           | Bike travel                            | `["bike", "cycle", "bicycling"]`  |
+| transit             | Public Transport                       | `["public", "transit", "train"]`  |
+| walking             | Walking                                | `["walk", "walking"]`             |
+| default             | Automatically choosing the best option | `["default", "best", "adaptive"]` |
+
+
+## License
+
+* [Icon - Freepik from Flaticon](https://www.flaticon.com/de/kostenloses-icon/google-maps_2667975)</string>
 	<key>uidata</key>
 	<dict>
 		<key>1260EC2C-1692-4B2B-AD37-B4117B323AB7</key>
@@ -359,9 +403,11 @@ Is is some example workflow.
 			<string>localisation</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string>www.adrianbartnik.de</string>
+	<string>https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow</string>
 </dict>
 </plist>
