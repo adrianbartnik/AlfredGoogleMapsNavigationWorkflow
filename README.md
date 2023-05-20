@@ -8,7 +8,7 @@ https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow/assets/39987
 ## Installation
 
 * Ensure you have Alfred installed with the Alfred Powerpack License :warning:
-* Download the [Google Maps ANavigation Workflow File](Google%20Maps%20Navigation.alfredworkflow)
+* Download the [Google Maps ANavigation Workflow File](Google%20Maps%20Navigation.alfredworkflow) or see the **Releases** section in the sidebar. 
 * Open the workflow file to import it into Alfred
 * Set up the workflow configuration parameters (see below for additional details) or by clicking the little [X] in the top right hand of the Workflow page in Alfred after installation
 
@@ -80,6 +80,13 @@ Run the following to lint the code:
 poetry run pflake8 .
 poetry run black .
 ```
+
+## Release Process
+
+* Make code adjustments and test them in Alfred
+* Export workflow file through Alfred and update the file in this repository
+* Commit and push the changes to Github
+* Create new release and manually attach updated workflow-file 
 
 ## License
 
