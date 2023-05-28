@@ -136,9 +136,9 @@
 				<key>runningsubtext</key>
 				<string>Waiting to retrieve Mappy Options</string>
 				<key>script</key>
-				<string>python3 google-maps.py "{query}"</string>
+				<string>python3 google-maps.py "$1"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -367,8 +367,8 @@ The latest list of valid transportation modes can be looked up in [lines 24 of t
 						<string>transit</string>
 					</array>
 					<array>
-						<string>default</string>
-						<string></string>
+						<string>Best according to Google Maps</string>
+						<string>best</string>
 					</array>
 				</array>
 			</dict>
@@ -406,7 +406,7 @@ The latest list of valid transportation modes can be looked up in [lines 24 of t
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/adrianbartnik/AlfredGoogleMapsNavigationWorkflow</string>
 </dict>

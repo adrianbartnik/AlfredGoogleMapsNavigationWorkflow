@@ -11,7 +11,7 @@ class TravelMode(Enum):
     WALKING = "walking"
     BICYCLING = "bicycling"
     TRANSIT = "transit"
-    DEFAULT = ""
+    BEST = "best"
 
 
 HOME_ADDRESS = os.environ.get("home_address")
@@ -21,31 +21,31 @@ LOCALISATION = os.environ.get("localisation")
 
 BASE_URL = f"https://www.google{LOCALISATION}/maps/dir/?api=1&"
 
-DRIVING_TRAVEL_MODES = ["car", "drive", "driving"]
-BIKING_TRAVEL_MODES = ["bike", "cycle", "bicycling"]
-TRANSIT_TRAVEL_MODES = ["public", "transit", "train"]
-WALKING_TRAVEL_MODES = ["walk", "walking"]
-DEFAULT_TRAVEL_MODES = ["default", "best", "adaptive"]
+DRIVING_TRAVEL_MODE_SYNONYMS = ["car", "drive", "driving"]
+BIKING_TRAVEL_MODE_SYNONYMS = ["bike", "cycle", "bicycling"]
+TRANSIT_TRAVEL_MODE_SYNONYMS = ["public", "transit", "train"]
+WALKING_TRAVEL_MODE_SYNONYMS = ["walk", "walking"]
+BEST_TRAVEL_MODE_SYNONYMS = ["default", "best", "adaptive"]
 ALL_TRAVEL_MODES = (
-    DRIVING_TRAVEL_MODES
-    + BIKING_TRAVEL_MODES
-    + TRANSIT_TRAVEL_MODES
-    + WALKING_TRAVEL_MODES
-    + DEFAULT_TRAVEL_MODES
+    DRIVING_TRAVEL_MODE_SYNONYMS
+    + BIKING_TRAVEL_MODE_SYNONYMS
+    + TRANSIT_TRAVEL_MODE_SYNONYMS
+    + WALKING_TRAVEL_MODE_SYNONYMS
+    + BEST_TRAVEL_MODE_SYNONYMS
 )
 
 
 def _parse_travel_mode(travel_mode_str: str) -> TravelMode:
-    if travel_mode_str in DRIVING_TRAVEL_MODES:
+    if travel_mode_str in DRIVING_TRAVEL_MODE_SYNONYMS:
         return TravelMode.DRIVING
-    if travel_mode_str in BIKING_TRAVEL_MODES:
+    if travel_mode_str in BIKING_TRAVEL_MODE_SYNONYMS:
         return TravelMode.BICYCLING
-    if travel_mode_str in TRANSIT_TRAVEL_MODES:
+    if travel_mode_str in TRANSIT_TRAVEL_MODE_SYNONYMS:
         return TravelMode.TRANSIT
-    if travel_mode_str in WALKING_TRAVEL_MODES:
+    if travel_mode_str in WALKING_TRAVEL_MODE_SYNONYMS:
         return TravelMode.WALKING
-    if travel_mode_str in DEFAULT_TRAVEL_MODES:
-        return TravelMode.DEFAULT
+    if travel_mode_str in BEST_TRAVEL_MODE_SYNONYMS:
+        return TravelMode.BEST
     else:
         return TRAVEL_MODE
 
@@ -61,7 +61,7 @@ def prepare_google_maps_url(
 
 
 def prepare_from_query(query: str):
-    pattern = f"^(from|to) (work|home) (.+?)(?: +({'|'.join(DRIVING_TRAVEL_MODES)}|{'|'.join(BIKING_TRAVEL_MODES)}|p{'|'.join(TRANSIT_TRAVEL_MODES)}|{'|'.join(WALKING_TRAVEL_MODES)}))?$"
+    pattern = f"^(from|to) (work|home) (.+?)(?: +({'|'.join(ALL_TRAVEL_MODES)}))?$"
 
     match = re.search(pattern, query)
 

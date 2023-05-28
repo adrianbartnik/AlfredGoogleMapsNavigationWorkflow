@@ -98,10 +98,25 @@ poetry run black .
 
 ## Release Process
 
-* Make code adjustments and test them in Alfred
+* Install workflow in Alfred
+* Make code changes in IDE (e.g. Pycharm) and compy them over to the Alfred workflow working directory
+* Test whether workflow changes work as expected
+* Once verified, remove unneeded assets from workflow directory, e.g. [`demo.mp4`](./assets/demo.mp4) & [`screenshot.jpg`](./assets/screenshot.png)
 * Export workflow file through Alfred and update the file in this repository
+* Copy over other files, e.g. `Info.plist`
+* Add entry to changelog in this `README.md`
 * Commit and push the changes to Github
-* Create new release and manually attach updated workflow-file 
+* Create new release in Github and manually attach updated workflow-file
+
+## Changelog
+
+### v1.0.1 - Address Workflow feedback from Alfred Forum
+
+* Reduce workflow size by removing unneeded files (e.g. demo video and screenshot)
+* Use `argv` instead of `{query}` in file filter
+* Rename `default` `travel_mode` to `best` and set default value 
+
+### v1.0.0 - Initial release
 
 ## License
 
